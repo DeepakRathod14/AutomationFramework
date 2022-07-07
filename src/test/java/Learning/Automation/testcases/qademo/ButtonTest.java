@@ -35,7 +35,7 @@ public class ButtonTest extends BaseTestClass{
 	public void nagativeScenario() {
 		Boolean b = new Random().nextBoolean();
 		System.out.println("Nagative Scenario  - ButtonTest : 	"+b);
-		Assert.assertTrue(false);
+		//Assert.assertTrue(false);
 	}
 	
 	@Test(groups = {"System","Regression","Smoke"})
