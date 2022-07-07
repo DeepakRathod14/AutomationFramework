@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+
+	<!-- <test name="packageExample" thread-count="3"> -->
+	<!-- <parameter name="Browser" value="Chrome"></parameter> -->
+	<!-- <parameter name="url" value="https://demoqa.com/text-box"></parameter> -->
+	<!-- <packages> -->
+	<!-- <package name="Learning.Automation.testcases.qademo.*"> -->
+	<!-- </package> -->
+	<!-- </packages> -->
+	<!-- </test> -->
+
+	<!-- <test thread-count="2" name="TextBox"> -->
+	<!-- <parameter name="Browser" value="Chrome"></parameter> -->
+	<!-- <parameter name="url" value="https://demoqa.com/text-box"></parameter> -->
+	<!-- <groups> -->
+	<!-- <run> -->
+	<!-- <include name="Regression"></include> -->
+	<!-- </run> -->
+	<!-- </groups> -->
+	<!-- <classes> -->
+	<!-- <class name="Learning.Automation.testcases.qademo.TextBoxTest" /> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+
+	<test thread-count="1" name="ButtonTest">
+		<parameter name="Browser" value="Chrome"></parameter>
+		<parameter name="url" value="https://demoqa.com/text-box"></parameter>
+		<groups>
+			<run>
+				<include name="Smoke"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="Learning.Automation.testcases.qademo.ButtonTest" />
+		</classes>
+	</test>
+
+
+	<!-- <test thread-count="2" name="CheckBoxTest"> -->
+	<!-- <parameter name="Browser" value="Chrome"></parameter> -->
+	<!-- <parameter name="url" value="https://demoqa.com/text-box"></parameter> -->
+	<!-- <groups> -->
+	<!-- <run> -->
+	<!-- <include name="System"></include> -->
+	<!-- </run> -->
+	<!-- </groups> -->
+	<!-- <classes> -->
+	<!-- <class name="Learning.Automation.testcases.qademo.CheckBoxTest" /> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+
+	<listeners>
+		<listener
+			class-name="Learning.Automation.listeners.ITestClass"></listener>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+</suite> <!-- Suite -->
